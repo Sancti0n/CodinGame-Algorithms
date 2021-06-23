@@ -29,5 +29,6 @@ class Solution {
             }
             newSpeed--;
         }
+        in.close();
     }
 }
