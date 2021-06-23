@@ -3,14 +3,11 @@ const lightCount = parseInt(readline());
 let tabDuration = [];
 let tabDistance = [];
 for (let i = 0; i < lightCount; i++) {
-    var inputs = readline().split(' ');
-    const distance = parseInt(inputs[0]);
-    const duration = parseInt(inputs[1]);
-    tabDuration[i] = duration;
-    tabDistance[i] = distance;
+    var inputs = readline().split(' '); 
+    tabDuration[i] = parseInt(inputs[1]);
+    tabDistance[i] = parseInt(inputs[0]);
 }
 
-let speedFinal;
 let newSpeed = speed;
 let compteur;
 while (lightCount != compteur) {
