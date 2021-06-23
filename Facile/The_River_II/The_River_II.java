@@ -12,20 +12,17 @@ class Solution {
     public static void main(String args[]) {
         Scanner in = new Scanner(System.in);
         int r1 = in.nextInt();
-        int r2 = in.nextInt();
+        int r2;
+        String value = "NO";
 
-        while (true) {
-            if (r1<r2) {
-                r1 = riverSum(r1);
-            }
-            else {
-                if (r1==r2) {
-                    break;
-                }
-                r2 = riverSum(r2);
+        for (int i=r1-1;i>1;i--) {
+            r2 = riverSum(i);
+            if (r2==r1) {
+                value = "YES";
+                break;
             }
         }
-        System.out.println(r1);
+        System.out.println(value);
         in.close();
     }
 }
